@@ -76,4 +76,4 @@ Source name
 Date
 Graphs over time
 
-Viewed by: John Luke, Corin Canepa, Nicholas Levergne
+Viewed by: John Luke Denny, Corin Canepa, Nicholas Levergne

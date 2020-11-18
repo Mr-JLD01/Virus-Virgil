@@ -16,13 +16,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="virus-virgil" />
         <module name="Test Directory" />
-        <module name="javafx-controls" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="javafx-controls" target="14" />
       <module name="Test Directory" target="14" />
+      <module name="virus-virgil" target="14" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,4 +1,4 @@
 module javafx.helloworld {
-    exports com.example.javafx;
+    exports com.example.application;
     requires javafx.controls;
 }

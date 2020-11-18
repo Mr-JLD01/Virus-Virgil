@@ -14,6 +14,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        FXMLLoader loader = new FXMLLoader();
+
+        /**
         primaryStage.setTitle("My First JavaFX App");
 
         Label label = new Label("Main World from JavaFX!");
@@ -24,5 +27,6 @@ public class Main extends Application {
         primaryStage.setScene(scene);
 
         primaryStage.show();
+         **/
     }
 }

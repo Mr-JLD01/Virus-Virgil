@@ -5,4 +5,6 @@ module org.cs3380project.module {
     requires httpcore;
     requires httpclient;
     requires json;
+
+    opens org.cs3380project.application.backend;
 }

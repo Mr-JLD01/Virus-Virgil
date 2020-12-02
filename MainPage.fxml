@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.2993311036789298" layoutX="231.0" layoutY="176.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #000000;">
+               <children>
+                  <Button alignment="BOTTOM_LEFT" focusTraversable="false" layoutX="9.0" layoutY="56.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="174.0" style="-fx-background-color: #0000;" text="Home" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">
+                     <effect>
+                        <Blend />
+                     </effect>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@homebutton.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="BOTTOM_LEFT" layoutX="1.0" layoutY="228.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="174.0" style="-fx-background-color: #0000;" text="About COVID" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@aboutcovid.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="BOTTOM_LEFT" layoutX="1.0" layoutY="130.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="174.0" style="-fx-background-color: #0000;" text="State Stats" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@US.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="BOTTOM_LEFT" layoutY="177.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="174.0" style="-fx-background-color: #0000;" text="Restrictions" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@restrictions.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutY="364.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="174.0" style="-fx-background-color: #0000;" text="About Us" textAlignment="RIGHT" textFill="WHITE" />
+                  <Text fill="WHITE" layoutX="9.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VIRUS VIRGIL" textAlignment="CENTER" wrappingWidth="158.16600036621094">
+                     <font>
+                        <Font name="Alien League Bold Italic" size="23.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+          <AnchorPane focusTraversable="true" minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="346.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <ImageView fitHeight="46.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

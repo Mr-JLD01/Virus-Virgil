@@ -26,7 +26,7 @@
                      <graphic>
                         <ImageView fitHeight="26.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@homebutton.png" />
+                              <Image url="@../../../../../../homebutton.png" />
                            </image></ImageView>
                      </graphic>
                   </Button>
@@ -37,7 +37,7 @@
                      <graphic>
                         <ImageView fitHeight="34.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@aboutcovid.png" />
+                              <Image url="@../../../../../../aboutcovid.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -49,7 +49,7 @@
                      <graphic>
                         <ImageView fitHeight="34.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@US.png" />
+                              <Image url="@../../../../../../US.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -61,7 +61,7 @@
                      <graphic>
                         <ImageView fitHeight="40.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@restrictions.png" />
+                              <Image url="@../../../../../../restrictions.png" />
                            </image>
                         </ImageView>
                      </graphic>

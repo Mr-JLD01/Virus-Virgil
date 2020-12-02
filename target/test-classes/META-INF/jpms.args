@@ -1,4 +1,0 @@
---patch-module
-org.cs3380project.module=_
---add-reads
-org.cs3380project.module=ALL-UNNAMED

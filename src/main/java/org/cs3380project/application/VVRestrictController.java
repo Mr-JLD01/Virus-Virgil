@@ -5,38 +5,30 @@ import javafx.fxml.FXML;
 
 
 
-public class VVAboutCovidController {
+public class VVRestrictController {
+
 
     //Brings you back to the home page
     @FXML
     private void switchToMainPage() throws IOException {
-
-
         Main.setRoot("VVMainPage");
     }
 
-    //bring you to about us
+    //Brings you to about covid
     @FXML
-    private void switchToAboutUs() throws IOException {
-
-
-        Main.setRoot("VVAboutUs");
+    private void switchToAboutCovid() throws IOException {
+        Main.setRoot("VVAboutCovid");
     }
 
-    //Brings you to COVID restrictions
+    //Brings you to about us
     @FXML
-    private void switchToRestrict() throws IOException {
-
-
-        Main.setRoot("VVRestrictions");
+    private void switchToAboutUs() throws IOException {
+        Main.setRoot("VVAboutUs");
     }
 
     //Brings you to state statistics
     @FXML
     private void switchToStateStats() throws IOException {
-
-
         Main.setRoot("VVStateStats");
     }
-
 }

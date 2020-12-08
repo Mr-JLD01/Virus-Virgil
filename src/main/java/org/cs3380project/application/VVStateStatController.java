@@ -33,7 +33,7 @@ public class VVStateStatController {
 
         //can be used to populate the state drop down list below
         String states [] = new String [50];
-        stateDropDown.getItems().addAll("Alabama", "Alaska",  "Arizona", "Arkansas", "Colorado" );
+        stateDropDown.getItems().addAll("Alabama", "Alaska",  "Arizona", "Arkansas", "Colorado" , "Louisiana");
 
 
     }

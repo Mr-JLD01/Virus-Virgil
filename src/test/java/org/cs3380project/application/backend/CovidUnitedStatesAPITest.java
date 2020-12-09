@@ -6,70 +6,53 @@ import org.junit.jupiter.api.*;
 public class CovidUnitedStatesAPITest {
     @DisplayName("Covid United States API test")
 
-    @Disabled
+    //@Disabled
     @Test
-    public void getStatesMetadata() {
-        System.out.println("======TEST GET STATES METADATA EXECUTED=======");
+    public void getStatesMetadataTest() {
+        System.out.println("====== 1 - TEST GET STATES METADATA EXECUTED =======");
         JSONObject result = CovidUnitedStatesAPI.getStatesMetadata();
         Assertions.assertNotNull(result);
-        System.out.println(result);
-        System.out.println("\n\n\n\n");
     }
 
     //@Disabled
     @Test
-    public void specificStateMetadata() {
-        System.out.println("======TEST GET LOUISIANA STATE METADATA EXECUTED=======");
-        JSONObject result = CovidUnitedStatesAPI.specificStateMetadata("CA");
-        System.out.println(result);
+    public void specificStateMetadataTest() {
+        System.out.println("====== 2 - TEST GET LOUISIANA STATE METADATA EXECUTED =======");
+        JSONObject result = CovidUnitedStatesAPI.specificStateMetadata("LA");
         Assertions.assertNotNull(result);
-        System.out.println("\n\n\n\n");
     }
 
-    @Disabled
+    //@Disabled
     @Test
-    public void currentValuesAllStates() {
-        System.out.println("======TEST GET CURRENT VALUES ALL STATES EXECUTED=======");
-        JSONObject result = CovidUnitedStatesAPI.currentValuesAllStates();
-        Assertions.assertNotNull(result);
-        System.out.println(result);
-        System.out.println("\n\n\n\n");
-    }
-
-    @Disabled
-    @Test
-    public void historicValuesAllStates() {
-        System.out.println("======TEST GET HISTORIC VALUES ALL STATES EXECUTED=======");
-        JSONObject result = CovidUnitedStatesAPI.historicValuesAllStates();
-        Assertions.assertNotNull(result);
-        System.out.println(result);
-        System.out.println("\n\n\n\n");
-    }
-
-    @Disabled
-    @Test
-    public void currentValuesSingleState() {
-        System.out.println("======TEST GET LOUISIANA CURRENT VALUES EXECUTED=======");
+    public void currentValuesSingleStateTest() {
+        System.out.println("====== 3 - TEST GET LOUISIANA CURRENT VALUES EXECUTED =======");
         JSONObject result = CovidUnitedStatesAPI.currentValuesSingleState("LA");
         Assertions.assertNotNull(result);
-        System.out.println(result);
-        System.out.println("\n\n\n\n");
     }
 
-    @Disabled
+    //@Disabled
     @Test
-    public void historicValuesSingleState() {
-        System.out.println("======TEST GET LOUISIANA HISTORICAL VALUES EXECUTED=======");
+    public void historicValuesSingleStateTest() {
+        System.out.println("====== 4 - TEST GET LOUISIANA HISTORICAL VALUES EXECUTED =======");
         JSONObject result = CovidUnitedStatesAPI.historicValuesSingleState("LA");
         Assertions.assertNotNull(result);
-        System.out.println(result);
-        System.out.println("\n\n\n\n");
     }
 
+    //@Disabled
+    @Test
+    public void currentValuesAllStatesTest() {
+        System.out.println("====== 5 - TEST GET CURRENT VALUES ALL STATES EXECUTED=======");
+        JSONObject result = CovidUnitedStatesAPI.currentValuesAllStates();
+        Assertions.assertNotNull(result);
+    }
 
-
-
-
-
+    // Note that this test, for some reason, takes some time to begin
+    //@Disabled
+    @Test
+    public void historicValuesAllStatesTest() {
+        System.out.println("====== 6 - TEST GET HISTORIC VALUES ALL STATES EXECUTED=======");
+        JSONObject result = CovidUnitedStatesAPI.historicValuesAllStates();
+        Assertions.assertNotNull(result);
+    }
 
 }

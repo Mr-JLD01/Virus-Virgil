@@ -1,6 +1,13 @@
 package org.cs3380project.application.backend;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
 import java.net.URI;
+import java.net.URL;
+import java.util.Scanner;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -42,9 +49,26 @@ public class  CovidUnitedStatesAPI {
         System.out.printf("Request URI %s\n", uriComplete);
 
         try {
-            // Prepare the URI for the REST API.
+            URL url = new URL(uriComplete);
+            HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+            conn.setRequestMethod("GET");
+            conn.connect();
+            int responsecode = conn.getResponseCode();
+            System.out.printf("Response Code: %d\n", responsecode);
+
+            String inline = "";
+            Scanner sc = new Scanner(url.openStream());
+            while (sc.hasNext())
+                inline +=sc.nextLine();
+            sc.close();
+
+            return new JSONObject(inline);
+
+            /**
             URI uri = new URIBuilder(uriComplete).build();
             HttpPost request = new HttpPost(uri);
+            request.setHeader("Content-Type", "application/json");
+            request.setHeader("Content-Type", "application/json");
 
             // Call the REST API method and get the response entity.
             HttpResponse response = httpClient.execute(request);
@@ -53,8 +77,10 @@ public class  CovidUnitedStatesAPI {
             if (entity != null) {
                 // Format and display the JSON response.
                 String jsonString = EntityUtils.toString(entity);
+                System.out.printf("JSONString %s\n", jsonString);
                 return new JSONObject(jsonString);
             }
+             */
         } catch (Exception e) {
             // Display error message.
             System.out.println(e.getMessage());

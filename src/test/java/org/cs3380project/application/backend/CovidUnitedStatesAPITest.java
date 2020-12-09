@@ -6,7 +6,7 @@ import org.junit.jupiter.api.*;
 public class CovidUnitedStatesAPITest {
     @DisplayName("Covid United States API test")
 
-    //@Disabled
+    @Disabled
     @Test
     public void getStatesMetadata() {
         System.out.println("======TEST GET STATES METADATA EXECUTED=======");
@@ -16,13 +16,13 @@ public class CovidUnitedStatesAPITest {
         System.out.println("\n\n\n\n");
     }
 
-    @Disabled
+    //@Disabled
     @Test
     public void specificStateMetadata() {
         System.out.println("======TEST GET LOUISIANA STATE METADATA EXECUTED=======");
-        JSONObject result = CovidUnitedStatesAPI.specificStateMetadata("LA");
-        Assertions.assertNotNull(result);
+        JSONObject result = CovidUnitedStatesAPI.specificStateMetadata("CA");
         System.out.println(result);
+        Assertions.assertNotNull(result);
         System.out.println("\n\n\n\n");
     }
 

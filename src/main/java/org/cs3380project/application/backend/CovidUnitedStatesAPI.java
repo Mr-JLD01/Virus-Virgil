@@ -13,7 +13,7 @@ import org.json.JSONObject;
  * Information on the API can be found here:    https://covidtracking.com/data/api
  * Changes to the API can be found here:        https://apichanges.covidtracking.com/
  */
-public class  CovidUnitedStatesAPI {
+public class CovidUnitedStatesAPI {
 
     private static final String urlBase = "https://api.covidtracking.com";
 

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.34782608695652173" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cs3380project.application.VVAboutCovidController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #000000;">
+         <children>
+            <Button fx:id="primaryButton1" alignment="BASELINE_LEFT" layoutX="16.0" layoutY="151.0" mnemonicParsing="false" onAction="#switchToRestrict" prefHeight="48.0" prefWidth="151.0" style="-fx-background-color: #000000;" text="Restrictions" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../pictures/RestrictButtonPic.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="primaryButton11" alignment="BASELINE_LEFT" layoutX="5.0" layoutY="208.0" mnemonicParsing="false" onAction="#switchToStateStats" prefHeight="48.0" prefWidth="174.0" style="-fx-background-color: #000000;" text="State Statistics" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../pictures/USButtonPic.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Text fill="WHITE" layoutX="32.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Virus Virgil">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Button fx:id="primaryButton111" alignment="BASELINE_LEFT" layoutX="64.0" layoutY="350.0" mnemonicParsing="false" onAction="#switchToAboutUs" prefHeight="48.0" prefWidth="76.0" style="-fx-background-color: #000000;" text="About Us" textFill="WHITE" />
+            <Button fx:id="primaryButton2" alignment="BASELINE_CENTER" layoutX="15.0" layoutY="100.0" mnemonicParsing="false" onAction="#switchToMainPage" prefHeight="48.0" prefWidth="151.0" style="-fx-background-color: #000000;" text="Home" textAlignment="CENTER" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../pictures/HomeButtonPic.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <Text layoutX="148.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About Covid-19">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="360.22900390625" />
+            <Text layoutX="14.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Why is the disease being called coronavirus disease 2019 (COVID-19)?" wrappingWidth="360.2290039062501">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="On February 11, 2020 the World Health Organization announced an official name for the disease that is causing the 2019 novel coronavirus outbreak, first identified in Wuhan China. The new name of this disease is coronavirus disease 2019, abbreviated as COVID-19. In COVID-19, ‘CO’ stands for ‘corona,’ ‘VI’ for ‘virus,’ and ‘D’ for disease. Formerly, this disease was referred to as “2019 novel coronavirus” or “2019-nCoV”." wrappingWidth="360.2290039062501" />
+            <Text layoutX="14.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How does the virus spread?" wrappingWidth="377.2290039062501">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="13.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The virus that causes COVID-19 most commonly spreads between people who are in close contact with one another (within about 6 feet, or 2 arm lengths). t spreads through respiratory droplets or small particles, such as those in aerosols, produced when an infected person coughs, sneezes, sings, talks, or breathes." wrappingWidth="360.2290039062501" />
+            <Text fill="#217375" layoutX="13.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="For more information regarding COVID-19, we recommend you visit the CDC Webiste: https://www.cdc.gov/coronavirus/https://www.cdc.gov/coronavirus/" wrappingWidth="360.2290039062501">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

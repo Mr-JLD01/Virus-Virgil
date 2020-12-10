@@ -4,6 +4,8 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import org.cs3380project.application.backend;
+
 
 public class VVStateStatController {
 
@@ -30,31 +32,25 @@ public class VVStateStatController {
         stateHosp.setText("");
 
         stateDropDown.getItems().clear();
-
+        
         //can be used to populate the state drop down list below
-        String states [] = new String [50];
-        stateDropDown.getItems().addAll("Alabama", "Alaska",  "Arizona", "Arkansas", "Colorado" , "Louisiana");
+        private String[] stateAbbv = {"AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"};
+        private String[] states = {"Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"};
+        for(int i = 0; i < 50; i++)
+            stateDropDown.getItems().add(states[i]);
 
 
     }
     //once the user selects their state from the drop down, they will click refresh to reload the labels below with the state information
     //this will need to be populate uses the state object
     public void getStateInfo(){
-
-        if ( stateDropDown.getValue() == "Alabama"){
-            stateCases.setText("1000");
-            stateDeaths.setText("1000");
-            stateHosp.setText("1000");
-        }
-
-        if ( stateDropDown.getValue() == "Alaska"){
-            stateCases.setText("2000");
-            stateDeaths.setText("2000");
-            stateHosp.setText("2000");
-        }
-
-
-
+        //try getIndex() not getValue()
+        int state = stateDropDown.getIndex();
+        JSONObject stateInfo = new CovidUnitedStatesAPI.currentValuesSingleState(stateAbbv[state]);
+        
+        stateCases.setText("" + stateInfo.getInt("positive"));
+        stateDeaths.setText("" + stateInfo.getInt("deathConfirmed"));
+        stateHosp.setText("" + stateInfo.getInt("hospitalizedCurrently"));
     }
 
     @FXML

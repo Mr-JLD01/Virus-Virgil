@@ -13,11 +13,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<SplitPane dividerPositions="0.34782608695652173" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cs3380project.application.VVStateStatController">
+<SplitPane dividerPositions="0.34782608695652173" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cs3380project.application.VVStateStatController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #000000;">
          <children>
-            <Button fx:id="primaryButton" alignment="BASELINE_LEFT" layoutX="6.0" layoutY="134.0" mnemonicParsing="false" onAction="#switchToAboutCovid" prefHeight="48.0" prefWidth="163.0" style="-fx-background-color: #000000;" text="About COVID" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="primaryButton" alignment="BASELINE_LEFT" layoutX="-2.0" layoutY="113.0" mnemonicParsing="false" onAction="#switchToAboutCovid" prefHeight="48.0" prefWidth="243.0" style="-fx-background-color: #000000;" text="About COVID" textAlignment="CENTER" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -29,7 +29,7 @@
                   <Font size="17.0" />
                </font>
             </Button>
-            <Button fx:id="primaryButton1" alignment="BASELINE_LEFT" layoutX="15.0" layoutY="182.0" mnemonicParsing="false" onAction="#switchToRestrict" prefHeight="48.0" prefWidth="151.0" style="-fx-background-color: #000000;" text="Restrictions" textFill="WHITE">
+            <Button fx:id="primaryButton1" alignment="BASELINE_LEFT" layoutX="-2.0" layoutY="161.0" mnemonicParsing="false" onAction="#switchToRestrict" prefHeight="48.0" prefWidth="151.0" style="-fx-background-color: #000000;" text="Restrictions" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -41,13 +41,13 @@
                   <Font size="17.0" />
                </font>
             </Button>
-            <Text fill="WHITE" layoutX="53.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Virus Virgil">
+            <Text fill="WHITE" layoutX="102.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Virus Virgil">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Button fx:id="primaryButton111" alignment="BASELINE_LEFT" layoutX="64.0" layoutY="350.0" mnemonicParsing="false" onAction="#switchToAboutUs" prefHeight="48.0" prefWidth="76.0" style="-fx-background-color: #000000;" text="About Us" textFill="WHITE" />
-            <Button fx:id="primaryButton2" alignment="BASELINE_CENTER" layoutX="6.0" layoutY="86.0" mnemonicParsing="false" onAction="#switchToMainPage" prefHeight="48.0" prefWidth="151.0" style="-fx-background-color: #000000;" text="Home" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="primaryButton111" alignment="BASELINE_LEFT" layoutX="128.0" layoutY="536.0" mnemonicParsing="false" onAction="#switchToAboutUs" prefHeight="48.0" prefWidth="76.0" style="-fx-background-color: #000000;" text="About Us" textFill="WHITE" />
+            <Button fx:id="primaryButton2" alignment="BASELINE_CENTER" layoutX="79.0" layoutY="46.0" mnemonicParsing="false" onAction="#switchToMainPage" prefHeight="48.0" prefWidth="151.0" style="-fx-background-color: #000000;" text="Home" textAlignment="CENTER" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -62,7 +62,7 @@
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>
-            <Text layoutX="81.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COVID-19 State Stats">
+            <Text layoutX="193.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COVID-19 State Stats">
                <font>
                   <Font size="21.0" />
                </font>
@@ -72,9 +72,9 @@
                   <Font size="18.0" />
                </font>
             </Text>
-            <ChoiceBox fx:id="stateDropDown" layoutX="96.0" layoutY="82.0" prefWidth="150.0" />
-            <Text layoutX="118.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="select a state below" />
-            <GridPane layoutX="31.0" layoutY="139.0" prefHeight="184.0" prefWidth="297.0">
+            <ChoiceBox fx:id="stateDropDown" layoutX="217.0" layoutY="82.0" prefWidth="150.0" />
+            <Text layoutX="240.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="select a state below" />
+            <GridPane layoutX="143.0" layoutY="207.0" prefHeight="184.0" prefWidth="297.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="186.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="111.0" />
@@ -83,19 +83,31 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints />
+                  <RowConstraints />
               </rowConstraints>
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Cases " textAlignment="RIGHT" wrappingWidth="157.08203125">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Positive Cases " textAlignment="RIGHT" wrappingWidth="157.08203125">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Deaths" textAlignment="RIGHT" wrappingWidth="151.48681640625" GridPane.rowIndex="1">
+                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Recovered" textAlignment="CENTER" wrappingWidth="176.48681640625" GridPane.rowIndex="1">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Hospitalizations" textAlignment="CENTER" wrappingWidth="176.48681640625" GridPane.rowIndex="2">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Deaths" textAlignment="RIGHT" wrappingWidth="151.48681640625" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Current Hospitalizations" textAlignment="CENTER" wrappingWidth="176.48681640625" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last Updated" textAlignment="CENTER" wrappingWidth="176.48681640625" GridPane.rowIndex="4">
                      <font>
                         <Font size="17.0" />
                      </font>
@@ -105,19 +117,29 @@
                         <Font size="17.0" />
                      </font>
                   </Label>
-                  <Label fx:id="stateDeaths" text="Label" textFill="#b51a1a" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                 <Label fx:id="stateTotalRecovered" text="Label" textFill="#b51a1a" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Label>
-                  <Label fx:id="stateHosp" text="Label" textFill="#b51a1a" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <Label fx:id="stateDeaths" text="Label" textFill="#b51a1a" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="stateHosp" text="Label" textFill="#b51a1a" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                 </Label>
+                 <Label fx:id="stateLastUpdated" text="Label" textFill="#b51a1a" GridPane.columnIndex="1" GridPane.rowIndex="4">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Label>
                </children>
             </GridPane>
-            <Button layoutX="259.0" layoutY="82.0" mnemonicParsing="false" onAction="#getStateInfo" text="refresh" />
+            <Button layoutX="384.0" layoutY="82.0" mnemonicParsing="false" onAction="#getStateInfo" text="refresh" />
          </children></AnchorPane>
   </items>
 </SplitPane>

@@ -8,11 +8,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<SplitPane dividerPositions="0.34782608695652173" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cs3380project.application.VVRestrictController">
+<SplitPane dividerPositions="0.34782608695652173" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cs3380project.application.VVRestrictController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #000000;">
          <children>
-            <Button fx:id="primaryButton" alignment="BASELINE_LEFT" layoutX="6.0" layoutY="145.0" mnemonicParsing="false" onAction="#switchToAboutCovid" prefHeight="48.0" prefWidth="163.0" style="-fx-background-color: #000000;" text="About COVID" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="primaryButton" alignment="BASELINE_LEFT" layoutX="-2.0" layoutY="106.0" mnemonicParsing="false" onAction="#switchToAboutCovid" prefHeight="48.0" prefWidth="240.0" style="-fx-background-color: #000000;" text="About COVID" textAlignment="CENTER" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -24,7 +24,7 @@
                   <Font size="17.0" />
                </font>
             </Button>
-            <Button fx:id="primaryButton11" alignment="BASELINE_LEFT" layoutX="6.0" layoutY="199.0" mnemonicParsing="false" onAction="#switchToStateStats" prefHeight="48.0" prefWidth="174.0" style="-fx-background-color: #000000;" text="State Statistics" textFill="WHITE">
+            <Button fx:id="primaryButton11" alignment="BASELINE_LEFT" layoutY="154.0" mnemonicParsing="false" onAction="#switchToStateStats" prefHeight="48.0" prefWidth="174.0" style="-fx-background-color: #000000;" text="State Statistics" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -36,13 +36,13 @@
                   <Font size="17.0" />
                </font>
             </Button>
-            <Text fill="WHITE" layoutX="32.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Virus Virgil">
+            <Text fill="WHITE" layoutX="102.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Virus Virgil">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Button fx:id="primaryButton111" alignment="BASELINE_LEFT" layoutX="64.0" layoutY="350.0" mnemonicParsing="false" onAction="#switchToAboutUs" prefHeight="48.0" prefWidth="76.0" style="-fx-background-color: #000000;" text="About Us" textFill="WHITE" />
-            <Button fx:id="primaryButton2" alignment="BASELINE_CENTER" layoutX="12.0" layoutY="90.0" mnemonicParsing="false" onAction="#switchToMainPage" prefHeight="48.0" prefWidth="151.0" style="-fx-background-color: #000000;" text="Home" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="primaryButton111" alignment="BASELINE_LEFT" layoutX="131.0" layoutY="536.0" mnemonicParsing="false" onAction="#switchToAboutUs" prefHeight="48.0" prefWidth="76.0" style="-fx-background-color: #000000;" text="About Us" textFill="WHITE" />
+            <Button fx:id="primaryButton2" alignment="BASELINE_CENTER" layoutX="79.0" layoutY="46.0" mnemonicParsing="false" onAction="#switchToMainPage" prefHeight="48.0" prefWidth="151.0" style="-fx-background-color: #000000;" text="Home" textAlignment="CENTER" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                      <image>

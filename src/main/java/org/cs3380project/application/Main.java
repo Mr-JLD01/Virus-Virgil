@@ -35,7 +35,7 @@ public class Main extends Application {
         primaryStage.show();
          */
 
-        scene = new Scene(loadFXML("VVMainPage"), 640, 480);
+        scene = new Scene(loadFXML("VVMainPage"), 900, 600);
         primaryStage.setScene(scene);
         primaryStage.show();
     }

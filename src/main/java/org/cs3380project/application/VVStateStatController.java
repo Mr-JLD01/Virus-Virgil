@@ -1,3 +1,4 @@
+John Luke Denny, Corin Canepa, Nicholas Levergne, Brian Tsai
 package org.cs3380project.application;
 
 import java.io.IOException;

@@ -17,7 +17,7 @@ import org.json.JSONObject;
 public class VVStateStatController {
 
     @FXML
-    private ChoiceBox stateDropDown;
+    private ChoiceBox<String> stateDropDown;
 
     @FXML
     private Label stateCases;
@@ -41,7 +41,7 @@ public class VVStateStatController {
             "LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV",
             "NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI",
             "SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"};
-    private ArrayList<String> states = new ArrayList<>(Arrays.asList(
+    private final ArrayList<String> states = new ArrayList<>(Arrays.asList(
             "Alabama","Alaska","Arizona","Arkansas","California","Colorado",
             "Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho",
             "Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana",
@@ -68,29 +68,37 @@ public class VVStateStatController {
     //once the user selects their state from the drop down, they will click refresh to reload the labels below with the state information
     //this will need to be populate uses the state object
     public void getStateInfo(){
-        
-        int state = states.indexOf(stateDropDown.getValue());
+        String val = stateDropDown.getValue();
+        int state = states.indexOf(val);
         JSONObject stateInfo = CovidUnitedStatesAPI.currentValuesSingleState(stateAbbv[state]);
         
         try{
-            stateCases.setText("" + stateInfo.getInt("positive"));
+            stateCases.setText(Integer.toString(stateInfo.getInt("positive")));
         }
-        catch(Exception e){}
+        catch(Exception e){
+            stateCases.setText("Not Available");
+        }
         
         try{
-            stateTotalRecovered.setText("" + stateInfo.getInt("recovered"));
+            stateTotalRecovered.setText(Integer.toString(stateInfo.getInt("recovered")));
         }
-        catch(Exception e){}
+        catch(Exception e){
+            stateTotalRecovered.setText("Not Available");
+        }
         
         try{
-            stateDeaths.setText("" + stateInfo.getInt("deathConfirmed"));
+            stateDeaths.setText(Integer.toString(stateInfo.getInt("deathConfirmed")));
         }
-        catch(Exception e){}
+        catch(Exception e){
+            stateDeaths.setText("Not Available");
+        }
         
         try{
-            stateHosp.setText("" + stateInfo.getInt("hospitalizedCurrently"));
+            stateHosp.setText(Integer.toString(stateInfo.getInt("hospitalizedCurrently")));
        }
-        catch(Exception e){}
+        catch(Exception e){
+            stateHosp.setText("Not Available");
+        }
         
         try{
             Integer value = stateInfo.getInt("date");
@@ -100,7 +108,9 @@ public class VVStateStatController {
             String formatedDate = newFormat.format(date);
             stateLastUpdated.setText(formatedDate);
         }
-        catch(Exception e){}
+        catch(Exception e){
+            stateCases.setText("Data not Found");
+        }
     }
 
     @FXML

@@ -20,21 +20,6 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        /*
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Main.class.getResource("VVAboutCovid.fxml"));
-        try {
-            Parent content = loader.load();
-            Scene scene = new Scene(content, 1280, 720);
-            primaryStage.setScene(scene);
-        } catch(IOException exception){
-            throw new RuntimeException(exception);
-        }
-
-        primaryStage.setTitle("Sample App");
-        primaryStage.show();
-         */
-
         scene = new Scene(loadFXML("VVMainPage"), 900, 600);
         primaryStage.setScene(scene);
         primaryStage.show();

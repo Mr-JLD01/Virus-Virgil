@@ -72,19 +72,27 @@ public class VVStateStatController {
         int state = states.indexOf(stateDropDown.getValue());
         JSONObject stateInfo = CovidUnitedStatesAPI.currentValuesSingleState(stateAbbv[state]);
         
-        if(stateInfo.getInt("positive") != null)
+        try{
             stateCases.setText("" + stateInfo.getInt("positive"));
+        }
+        catch(Exception e){}
         
-        if(stateInfo.getInt("recovered") != null)
+        try{
             stateTotalRecovered.setText("" + stateInfo.getInt("recovered"));
+        }
+        catch(Exception e){}
         
-        if(stateInfo.getInt("deathConfirmed") != null)
+        try{
             stateDeaths.setText("" + stateInfo.getInt("deathConfirmed"));
+        }
+        catch(Exception e){}
         
-        if(stateInfo.getInt("hospitalizedCurrently") != null)
+        try{
             stateHosp.setText("" + stateInfo.getInt("hospitalizedCurrently"));
+       }
+        catch(Exception e){}
         
-        if(stateInfo.getInt("date") != null){
+        try{
             int value = stateInfo.getInt("date");
             SimpleDateFormat originalFormat = new SimpleDateFormat("yyyyMMdd");
             Date date = originalFormat.parse(value.toString());
@@ -92,6 +100,7 @@ public class VVStateStatController {
             String formatedDate = newFormat.format(date);
             stateLastUpdated.setText(formatedDate);
         }
+        catch(Exception e){}
     }
 
     @FXML

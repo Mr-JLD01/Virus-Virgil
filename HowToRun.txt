@@ -1,0 +1,2 @@
+In an IDE of your choice, open the file after downloading and right click it once open. Make sure that JAVAFX Maven is installed and select "Run Maven" then select "Goals...". 
+In the Goals field, type "clean:clean compiler:compile javafx:run". Check "Remember As" and type a title. Click ok. The program should now run. 

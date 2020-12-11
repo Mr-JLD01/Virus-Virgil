@@ -115,7 +115,7 @@
                         <Font size="17.0" />
                      </font>
                   </Label>
-                 <Label fx:id="stateRecovered" text="Label" textFill="#b51a1a" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                 <Label fx:id="stateTotalRecovered" text="Label" textFill="#b51a1a" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font size="17.0" />
                      </font>

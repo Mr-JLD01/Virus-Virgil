@@ -3,6 +3,8 @@ package org.cs3380project.application;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
+import java.text.*;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
@@ -24,6 +26,12 @@ public class VVStateStatController {
 
     @FXML
     private Label stateHosp;
+    
+    @FXML
+    private Label stateTotalRecovered;
+    
+    @FXML
+    private Label stateLastUpdated;
 
     public String temp = null;
 
@@ -45,9 +53,11 @@ public class VVStateStatController {
     //populates the drop down menu with states;
     public void getStates(){
 
-        stateCases.setText("");
-        stateDeaths.setText("");
-        stateHosp.setText("");
+        stateCases.setText("Not Available");
+        stateTotalRecovered.setText("Not Available");
+        stateDeaths.setText("Not Available");
+        stateHosp.setText("Not Available");
+        stateLastUpdated.setText("Not Available");
 
         stateDropDown.getItems().clear();
         
@@ -57,13 +67,30 @@ public class VVStateStatController {
     //once the user selects their state from the drop down, they will click refresh to reload the labels below with the state information
     //this will need to be populate uses the state object
     public void getStateInfo(){
-        //try getIndex() not getValue()
+        
         int state = states.indexOf(stateDropDown.getValue());
         JSONObject stateInfo = CovidUnitedStatesAPI.currentValuesSingleState(stateAbbv[state]);
         
-        stateCases.setText("" + stateInfo.getInt("positive"));
-        stateDeaths.setText("" + stateInfo.getInt("deathConfirmed"));
-        stateHosp.setText("" + stateInfo.getInt("hospitalizedCurrently"));
+        if(stateInfo.getInt("positive") != null)
+            stateCases.setText("" + stateInfo.getInt("positive"));
+        
+        if(stateInfo.getInt("recovered") != null)
+            stateTotalRecovered.setText("" + stateInfo.getInt("recovered"));
+        
+        if(stateInfo.getInt("deathConfirmed") != null)
+            stateDeaths.setText("" + stateInfo.getInt("deathConfirmed"));
+        
+        if(stateInfo.getInt("hospitalizedCurrently") != null)
+            stateHosp.setText("" + stateInfo.getInt("hospitalizedCurrently"));
+        
+        if(stateInfo.getInt("date") != null){
+            int value = stateInfo.getInt("date");
+            SimpleDateFormat originalFormat = new SimpleDateFormat("yyyyMMdd");
+            Date date = originalFormat.parse(value.toString());
+            SimpleDateFormat newFormat = new SimpleDateFormat("MM-dd-yyyy");
+            String formatedDate = newFormat.format(date);
+            stateLastUpdated.setText(formatedDate);
+        }
     }
 
     @FXML

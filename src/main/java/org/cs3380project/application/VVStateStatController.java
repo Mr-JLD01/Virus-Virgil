@@ -93,7 +93,7 @@ public class VVStateStatController {
         catch(Exception e){}
         
         try{
-            int value = stateInfo.getInt("date");
+            Integer value = stateInfo.getInt("date");
             SimpleDateFormat originalFormat = new SimpleDateFormat("yyyyMMdd");
             Date date = originalFormat.parse(value.toString());
             SimpleDateFormat newFormat = new SimpleDateFormat("MM-dd-yyyy");

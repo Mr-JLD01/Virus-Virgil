@@ -85,27 +85,17 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Positive Cases " textAlignment="RIGHT" wrappingWidth="157.08203125">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Cases " textAlignment="RIGHT" wrappingWidth="157.08203125">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Text>
-                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Recovered" textAlignment="CENTER" wrappingWidth="176.48681640625" GridPane.rowIndex="1">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Deaths" textAlignment="RIGHT" wrappingWidth="151.48681640625" GridPane.rowIndex="1">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Deaths" textAlignment="RIGHT" wrappingWidth="151.48681640625" GridPane.rowIndex="2">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Current Hospitalizations" textAlignment="CENTER" wrappingWidth="176.48681640625" GridPane.rowIndex="3">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </Text>
-                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last Updated" textAlignment="CENTER" wrappingWidth="176.48681640625" GridPane.rowIndex="4">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Hospitalizations" textAlignment="CENTER" wrappingWidth="176.48681640625" GridPane.rowIndex="2">
                      <font>
                         <Font size="17.0" />
                      </font>
@@ -115,22 +105,12 @@
                         <Font size="17.0" />
                      </font>
                   </Label>
-                 <Label fx:id="stateTotalRecovered" text="Label" textFill="#b51a1a" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Label fx:id="stateDeaths" text="Label" textFill="#b51a1a" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Label>
-                  <Label fx:id="stateDeaths" text="Label" textFill="#b51a1a" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="stateHosp" text="Label" textFill="#b51a1a" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                 </Label>
-                 <Label fx:id="stateLastUpdated" text="Label" textFill="#b51a1a" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <Label fx:id="stateHosp" text="Label" textFill="#b51a1a" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <font>
                         <Font size="17.0" />
                      </font>

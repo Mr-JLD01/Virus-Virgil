@@ -1,2 +1,13 @@
-In an IDE of your choice, open the file after downloading and right click it once open. Make sure that JAVAFX Maven is installed and select "Run Maven" then select "Goals...". 
-In the Goals field, type "clean:clean compiler:compile javafx:run". Check "Remember As" and type a title. Click ok. The program should now run. 
+The project runs with Maven dependencies. Make sure the IDE of your choice (IntelliJ is recommended) supports Maven projects.
+
+In addition, the project JDK version Maven will use is 15. You may try editing the pom.xml file <java.version> parameter if you want to use a different Java version.
+
+To run the program, either your IDE must support Maven commands, or you have Maven installed on your system.
+
+To run the program, use the following Maven Plugin commands:
+
+mvn clean:clean compiler:compile javafx:run
+
+The project uses the JUnit5 testing framework. To run the 2 tests with Maven, use the following Maven Lifecycle commands:
+
+mvn clean test

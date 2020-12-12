@@ -34,9 +34,7 @@ public class VVStateStatController {
     @FXML
     private Label stateLastUpdated;
 
-    public String temp = null;
-
-    private String[] stateAbbv = {"AL","AK","AZ","AR","CA","CO",
+    private final String[] stateAbbv = {"AL","AK","AZ","AR","CA","CO",
             "CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY",
             "LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV",
             "NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI",
@@ -70,6 +68,8 @@ public class VVStateStatController {
     public void getStateInfo(){
         String val = stateDropDown.getValue();
         int state = states.indexOf(val);
+        if (state == -1)
+            return;
         JSONObject stateInfo = CovidUnitedStatesAPI.currentValuesSingleState(stateAbbv[state]);
         
         try{

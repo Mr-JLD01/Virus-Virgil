@@ -31,25 +31,11 @@
             <version>15</version>
         </dependency>
 
-        <!-- Apache HTTP client -->
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.5</version>
-        </dependency>
-
-        <!-- Apache HTTP core -->
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpcore</artifactId>
-            <version>4.4.9</version>
-        </dependency>
-
         <!-- JSON Library -->
         <dependency>
-            <groupId>org.json</groupId>
+            <groupId>com.guicedee.services</groupId>
             <artifactId>json</artifactId>
-            <version>20180130</version>
+            <version>1.1.0.6</version>
         </dependency>
 
         <!-- JUnit5 Testing API -->
